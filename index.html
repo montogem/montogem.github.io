@@ -3,126 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radmir RP | Redukс</title>
+    <title>БилетПДДПМР — официальные билеты ПДД</title>
+    <meta name="description" content="БилетПДДПМР — понятный и доверительный сайт для покупки билетов ПДД, выбора варианта и оплаты в отдельном окне." />
+    <meta name="keywords" content="билетпддпмр, билеты пдд, купить билеты пдд, пдд обучение, билет пдд" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="БилетПДДПМР" />
+    <meta property="og:description" content="Надёжный сайт для покупки билетов ПДД с понятным оформлением и безопасной оплатой." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://montogem.github.io/" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app-shell">
-        <aside class="sidebar">
-            <div class="brand">Radmir RP</div>
-            <div class="server-label">Сервер</div>
-            <nav class="server-list">
-                <a class="server-item active"># Редукс</a>
-                <a class="server-item"># Бонусы</a>
-                <a class="server-item"># Поддержка</a>
-            </nav>
-        </aside>
+    <header class="topbar">
+        <a href="#top" class="brand">БилетПДДПМР</a>
+        <nav class="nav">
+            <a href="#offers">Билеты</a>
+            <a href="#benefits">Преимущества</a>
+            <a href="#buy">Оплата</a>
+            <a href="#support">Поддержка</a>
+        </nav>
+    </header>
 
-        <main class="main-panel">
-            <header class="topbar">
-                <div>
-                    <p class="topbar-title">Магазин редукса</p>
-                    <p class="topbar-subtitle">Официальный продавец для Радмир РП</p>
+    <main class="container" id="top">
+        <section class="hero">
+            <div class="hero-copy">
+                <span class="pill">🛑 Безопасно • Быстро • Доверительно</span>
+                <h1>БилетПДДПМР — удобный способ получить качественные билеты ПДД</h1>
+                <p>Мы сделали сайт понятным и аккуратным: здесь легко выбрать нужный вариант, ознакомиться с условиями и перейти к оплате в отдельном окне. Цвета, оформление и структура выдержаны в теме дорожной безопасности, чтобы вы чувствовали доверие с первого взгляда.</p>
+                <div class="hero-actions">
+                    <a href="#offers" class="btn primary">Выбрать билет</a>
+                    <a href="#benefits" class="btn secondary">Почему это надёжно</a>
                 </div>
-                <a href="#offers" class="topbar-btn">Купить сейчас</a>
-            </header>
+            </div>
+            <div class="hero-media">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80" alt="Дорожный знак и безопасность движения" />
+            </div>
+        </section>
 
-            <section class="hero">
-                <div class="hero-copy">
-                    <span class="pill">⚡ Быстрая доставка в игру</span>
-                    <h1>Купи редукс для Радмир РП и получи доступ к лучшим возможностям</h1>
-                    <p>Надёжные сделки, мгновенная выдача, удобная поддержка и понятные пакеты под любой бюджет.</p>
-                    <div class="hero-actions">
-                        <a href="#offers" class="btn primary">Выбрать пакет</a>
-                        <a href="#about" class="btn secondary">Как это работает</a>
-                    </div>
-                </div>
+        <section class="about" id="about">
+            <div class="about-text">
+                <h2>Что вы найдёте на сайте</h2>
+                <p>На странице представлены понятные варианты билетов, краткое описание преимуществ, а также удобная форма заявки. Всё оформлено в дорожной тематике с акцентом на безопасность, доверие и простоту выбора.</p>
+            </div>
+            <div class="about-card">
+                <h3>Текущий выбор</h3>
+                <p id="selected-ticket">Базовый набор</p>
+                <p class="selected-price" id="selected-price">От 399 ₽</p>
+                <ul>
+                    <li>Понятное оформление</li>
+                    <li>Оплата в новом окне</li>
+                    <li>Поддержка по заявке</li>
+                </ul>
+            </div>
+        </section>
 
-                <div class="hero-card">
-                    <p class="card-label">Текущий выбор</p>
-                    <h3 id="selected-package">Стартовый пакет</h3>
-                    <p id="selected-price">От 299 ₽</p>
+        <section class="section" id="offers">
+            <div class="section-head">
+                <h2>Варианты билетов ПДД</h2>
+                <p>Выберите подходящий пакет в зависимости от задач</p>
+            </div>
+            <div class="product-grid">
+                <article class="product-card">
+                    <h3>Базовый</h3>
+                    <p class="price">399 ₽</p>
+                    <p>Подойдёт для знакомства с основными вопросами и тренировкой.</p>
                     <ul>
-                        <li>Доставка в течение 5 минут</li>
-                        <li>Поддержка 24/7</li>
-                        <li>Безопасная сделка</li>
+                        <li>Базовые вопросы</li>
+                        <li>Понятный интерфейс</li>
+                        <li>Быстрый доступ</li>
                     </ul>
-                </div>
-            </section>
+                    <a href="#buy" class="package-btn" data-ticket="Базовый набор" data-price="399 ₽">Выбрать</a>
+                </article>
 
-            <section class="section" id="offers">
-                <div class="section-head">
-                    <h2>Пакеты редукса</h2>
-                    <p>Выбери вариант под свои цели</p>
-                </div>
-                <div class="product-grid">
-                    <article class="product-card">
-                        <h3>Стартовый</h3>
-                        <p class="price">299 ₽</p>
-                        <p>Подойдёт для новичка и первого входа в сервер.</p>
-                        <ul>
-                            <li>Базовый набор</li>
-                            <li>Быстрая доставка</li>
-                            <li>Поддержка в чате</li>
-                        </ul>
-                        <button class="buy-btn" data-package="Стартовый пакет" data-price="299 ₽">Выбрать</button>
-                    </article>
+                <article class="product-card featured">
+                    <span class="badge">Популярно</span>
+                    <h3>Стандарт</h3>
+                    <p class="price">799 ₽</p>
+                    <p>Оптимальный вариант для тех, кто хочет больше практики и уверенности.</p>
+                    <ul>
+                        <li>Расширенный набор</li>
+                        <li>Больше тем и вопросов</li>
+                        <li>Поддержка и консультация</li>
+                    </ul>
+                    <a href="#buy" class="package-btn" data-ticket="Стандарт" data-price="799 ₽">Выбрать</a>
+                </article>
 
-                    <article class="product-card featured">
-                        <span class="badge">Популярно</span>
-                        <h3>Премиум</h3>
-                        <p class="price">799 ₽</p>
-                        <p>Оптимальный выбор для активной игры и большего комфорта.</p>
-                        <ul>
-                            <li>Расширенный набор</li>
-                            <li>Приоритетная помощь</li>
-                            <li>Больше возможностей</li>
-                        </ul>
-                        <button class="buy-btn" data-package="Премиум пакет" data-price="799 ₽">Выбрать</button>
-                    </article>
+                <article class="product-card">
+                    <h3>Премиум</h3>
+                    <p class="price">1299 ₽</p>
+                    <p>Полный вариант для тех, кто хочет получить максимум знаний и уверенности.</p>
+                    <ul>
+                        <li>Полный комплект</li>
+                        <li>Максимум материала</li>
+                        <li>Удобная оплата</li>
+                    </ul>
+                    <a href="#buy" class="package-btn" data-ticket="Премиум" data-price="1299 ₽">Выбрать</a>
+                </article>
+            </div>
+        </section>
 
-                    <article class="product-card">
-                        <h3>Легендарный</h3>
-                        <p class="price">1499 ₽</p>
-                        <p>Максимум возможностей для серьёзного игрока.</p>
-                        <ul>
-                            <li>Максимальный набор</li>
-                            <li>Приоритетная выдача</li>
-                            <li>Эксклюзивные бонусы</li>
-                        </ul>
-                        <button class="buy-btn" data-package="Легендарный пакет" data-price="1499 ₽">Выбрать</button>
-                    </article>
+        <section class="section" id="benefits">
+            <div class="section-head">
+                <h2>Почему стоит доверять</h2>
+                <p>Мы сделали сайт аккуратным, понятным и безопасным по восприятию</p>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Чёткая подача</h3>
+                    <p>Сайт не перегружен лишним: всё сосредоточено на выборе билетов, оплате и поддержке.</p>
                 </div>
-            </section>
+                <div class="info-card">
+                    <h3>Дорожная тематика</h3>
+                    <p>Цвета и оформление отсылают к правилам дорог, знакам и безопасному движению.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Удобная оплата</h3>
+                    <p>Оплата открывается в отдельном окне, чтобы не терять внимание и чувствовать контроль процесса.</p>
+                </div>
+            </div>
+        </section>
 
-            <section class="section" id="about">
-                <div class="section-head">
-                    <h2>Почему выбирают нас</h2>
-                    <p>Сервис, который ощущается как дружелюбный Discord-канал — просто и надёжно</p>
-                </div>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h3>Безопасно</h3>
-                        <p>Сделки проходят спокойно, без лишней суеты и риска.</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>Быстро</h3>
-                        <p>Пакеты выдаются в течение нескольких минут после оплаты.</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>Поддержка</h3>
-                        <p>Всегда можно обратиться за помощью и получить ответ быстро.</p>
-                    </div>
-                </div>
-            </section>
+        <section class="buy-section" id="buy">
+            <div class="buy-card">
+                <h2>Оставить заявку и перейти к оплате</h2>
+                <p>Заполните форму, и мы сразу поймём, какой вариант вам нужен. После этого откроется отдельное окно оплаты.</p>
+                <form id="order-form">
+                    <label>
+                        <span>Ваше имя</span>
+                        <input type="text" id="name" placeholder="Например: Poligon" required>
+                    </label>
+                    <label>
+                        <span>Выберите вариант</span>
+                        <select id="ticket-select">
+                            <option>Базовый набор</option>
+                            <option>Стандарт</option>
+                            <option>Премиум</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Комментарий</span>
+                        <textarea id="comment" rows="4" placeholder="Например: хочу разобраться с правилами и оплатить билет"></textarea>
+                    </label>
+                    <button type="submit" class="btn primary full">Отправить заявку</button>
+                    <p class="form-message" id="form-message">Заявка будет обработана, а затем откроется окно оплаты.</p>
+                </form>
+            </div>
+            <div class="buy-side">
+                <h3>Почему это удобно</h3>
+                <p>Мы сделали всё так, чтобы пользователь быстро понимал, что происходит на сайте и кому можно доверять.</p>
+                <div class="side-item">• Быстрый выбор варианта</div>
+                <div class="side-item">• Отдельное окно оплаты</div>
+                <div class="side-item">• Внешний вид в теме ПДД</div>
+            </div>
+        </section>
 
-            <section class="cta">
-                <h2>Готов купить редукс?</h2>
-                <p>Оставь заявку в поддержку, и мы подберём подходящий пакет прямо сейчас.</p>
-                <a href="#" class="btn primary">Написать в поддержку</a>
-            </section>
-        </main>
-    </div>
+        <section class="support" id="support">
+            <h2>Поддержка и контакт</h2>
+            <p>Если возникли вопросы, оставьте заявку — мы поможем подобрать нужный вариант и объясним детали.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 БилетПДДПМР — билеты ПДД и удобная оплата</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
