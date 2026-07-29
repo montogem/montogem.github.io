@@ -1,163 +1,369 @@
-/* Базовые сбросы и шрифты */
+:root {
+    --bg: #36393f;
+    --panel: #2f3136;
+    --sidebar: #202225;
+    --text: #dcddde;
+    --muted: #b9bbbe;
+    --accent: #5865f2;
+    --accent-dark: #4752c4;
+    --border: #40444b;
+    --success: #57f287;
+}
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 body {
-    background-color: #fafafa;
-    color: #222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #23272a, var(--bg));
+    color: var(--text);
+    min-height: 100vh;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+body, html {
+    scroll-behavior: smooth;
 }
 
-/* Шапка сайта */
-.header {
-    background-color: #fff;
-    border-bottom: 1px solid #eaeaea;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+.app-shell {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: 100vh;
 }
 
-.header-content {
+.sidebar {
+    background: var(--sidebar);
+    padding: 24px 16px;
+    border-right: 1px solid var(--border);
+}
+
+.brand {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 24px;
+}
+
+.server-label {
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 12px;
+}
+
+.server-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.server-item {
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.server-item:hover,
+.server-item.active {
+    background: rgba(88, 101, 242, 0.2);
+    color: white;
+}
+
+.main-panel {
+    padding: 24px;
+}
+
+.topbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    background: rgba(47, 49, 54, 0.95);
+    padding: 16px 20px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 24px;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+.topbar-title {
+    font-weight: 700;
+    color: white;
+}
+
+.topbar-subtitle {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.topbar-btn {
     text-decoration: none;
-    color: #000;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    background: var(--accent);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-weight: 600;
 }
 
-.nav-menu a, .user-actions a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #444;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav-menu a:hover, .user-actions a:hover {
-    color: #000;
-}
-
-/* Главный баннер */
 .hero {
-    height: 65vh;
-    /* Используем картинку с Unsplash для фона */
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 20px;
+    padding: 28px;
+    background: linear-gradient(135deg, rgba(88, 101, 242, 0.22), rgba(47, 49, 54, 0.95));
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    margin-bottom: 24px;
+}
+
+.pill {
+    display: inline-block;
+    background: rgba(255,255,255,0.08);
+    color: #dbe4ff;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
 }
 
 .hero h1 {
-    font-size: 52px;
-    margin-bottom: 15px;
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
+    color: white;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.hero p {
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+    flex-wrap: wrap;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 14px 28px;
-    background-color: #fff;
-    color: #000;
+    padding: 12px 18px;
+    border-radius: 999px;
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: 0.3s;
+    font-weight: 700;
+    transition: transform 0.2s ease;
 }
 
 .btn:hover {
-    background-color: #000;
-    color: #fff;
+    transform: translateY(-1px);
 }
 
-/* Сетка товаров */
-.featured-products {
-    padding: 70px 20px;
+.btn.primary {
+    background: var(--accent);
+    color: white;
 }
 
-.featured-products h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 32px;
+.btn.secondary {
+    background: rgba(255,255,255,0.08);
+    color: white;
 }
 
-.products-grid {
+.hero-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.card-label {
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+}
+
+.hero-card h3 {
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 6px;
+}
+
+.hero-card p {
+    color: #8e9297;
+}
+
+.hero-card ul {
+    list-style: none;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hero-card li::before {
+    content: '•';
+    color: var(--success);
+    margin-right: 8px;
+}
+
+.section {
+    margin-bottom: 24px;
+}
+
+.section-head {
+    margin-bottom: 16px;
+}
+
+.section-head h2 {
+    color: white;
+    margin-bottom: 6px;
+}
+
+.section-head p {
+    color: var(--muted);
+}
+
+.product-grid {
     display: grid;
-    /* Адаптивная сетка: сама перестраивается под телефон/ПК */
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
 }
 
 .product-card {
-    background: #fff;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-.product-img {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-}
-
-.product-info {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
     padding: 20px;
-    text-align: center;
+    position: relative;
 }
 
-.product-price {
-    font-weight: bold;
-    margin-top: 10px;
-    font-size: 18px;
+.product-card.featured {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px rgba(88, 101, 242, 0.15);
 }
 
-.add-to-cart {
-    margin-top: 15px;
-    padding: 12px;
+.badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: var(--accent);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 0.76rem;
+}
+
+.product-card h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #f5f5f5;
+    margin-bottom: 10px;
+}
+
+.product-card ul {
+    list-style: none;
+    margin: 12px 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--muted);
+}
+
+.product-card li::before {
+    content: '✓';
+    color: var(--success);
+    margin-right: 8px;
+}
+
+.buy-btn {
     width: 100%;
-    background-color: #000;
-    color: #fff;
     border: none;
+    background: var(--accent);
+    color: white;
+    padding: 10px 12px;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 4px;
-    font-weight: bold;
-    transition: 0.3s;
+    font-weight: 600;
 }
 
-.add-to-cart:hover {
-    background-color: #333;
+.buy-btn:hover {
+    background: var(--accent-dark);
 }
 
-/* Футер */
-.footer {
-    background-color: #111;
-    color: #fff;
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.info-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.info-card h3 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.cta {
+    background: linear-gradient(135deg, rgba(88, 101, 242, 0.25), rgba(52, 57, 63, 0.95));
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 24px;
     text-align: center;
-    padding: 25px 0;
-    margin-top: 40px;
+}
+
+.cta h2 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.cta p {
+    color: var(--text);
+    margin-bottom: 16px;
+}
+
+@media (max-width: 920px) {
+    .app-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .hero,
+    .product-grid,
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .main-panel {
+        padding: 12px;
+    }
+
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 18px;
+    }
 }

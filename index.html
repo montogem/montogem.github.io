@@ -3,49 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuxuryWear | Премиальная одежда</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Radmir RP | Redukс</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Навигация -->
-    <header class="header">
-        <div class="container header-content">
-            <a href="index.html" class="logo">LuxuryWear</a>
-            <nav class="nav-menu">
-                <a href="catalog.html">Каталог</a>
-                <a href="#about">О нас</a>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand">Radmir RP</div>
+            <div class="server-label">Сервер</div>
+            <nav class="server-list">
+                <a class="server-item active"># Редукс</a>
+                <a class="server-item"># Бонусы</a>
+                <a class="server-item"># Поддержка</a>
             </nav>
-            <div class="user-actions">
-                <a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a>
-                <a href="login.html" class="login-btn">Войти</a>
-            </div>
-        </div>
-    </header>
+        </aside>
 
-    <!-- Главный баннер -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Новая коллекция 2026</h1>
-            <p>Идеальный стиль для любого случая.</p>
-            <a href="catalog.html" class="btn">Смотреть каталог</a>
-        </div>
-    </section>
+        <main class="main-panel">
+            <header class="topbar">
+                <div>
+                    <p class="topbar-title">Магазин редукса</p>
+                    <p class="topbar-subtitle">Официальный продавец для Радмир РП</p>
+                </div>
+                <a href="#offers" class="topbar-btn">Купить сейчас</a>
+            </header>
 
-    <!-- Популярные товары -->
-    <section class="featured-products container">
-        <h2>Популярные модели</h2>
-        <!-- Контейнер, куда JavaScript добавит карточки товаров -->
-        <div class="products-grid" id="products-grid"></div>
-    </section>
+            <section class="hero">
+                <div class="hero-copy">
+                    <span class="pill">⚡ Быстрая доставка в игру</span>
+                    <h1>Купи редукс для Радмир РП и получи доступ к лучшим возможностям</h1>
+                    <p>Надёжные сделки, мгновенная выдача, удобная поддержка и понятные пакеты под любой бюджет.</p>
+                    <div class="hero-actions">
+                        <a href="#offers" class="btn primary">Выбрать пакет</a>
+                        <a href="#about" class="btn secondary">Как это работает</a>
+                    </div>
+                </div>
 
-    <!-- Футер -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 LuxuryWear. Все права защищены.</p>
-        </div>
-    </footer>
+                <div class="hero-card">
+                    <p class="card-label">Текущий выбор</p>
+                    <h3 id="selected-package">Стартовый пакет</h3>
+                    <p id="selected-price">От 299 ₽</p>
+                    <ul>
+                        <li>Доставка в течение 5 минут</li>
+                        <li>Поддержка 24/7</li>
+                        <li>Безопасная сделка</li>
+                    </ul>
+                </div>
+            </section>
 
-    <!-- Подключение логики -->
-    <script src="js/app.js"></script>
+            <section class="section" id="offers">
+                <div class="section-head">
+                    <h2>Пакеты редукса</h2>
+                    <p>Выбери вариант под свои цели</p>
+                </div>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <h3>Стартовый</h3>
+                        <p class="price">299 ₽</p>
+                        <p>Подойдёт для новичка и первого входа в сервер.</p>
+                        <ul>
+                            <li>Базовый набор</li>
+                            <li>Быстрая доставка</li>
+                            <li>Поддержка в чате</li>
+                        </ul>
+                        <button class="buy-btn" data-package="Стартовый пакет" data-price="299 ₽">Выбрать</button>
+                    </article>
+
+                    <article class="product-card featured">
+                        <span class="badge">Популярно</span>
+                        <h3>Премиум</h3>
+                        <p class="price">799 ₽</p>
+                        <p>Оптимальный выбор для активной игры и большего комфорта.</p>
+                        <ul>
+                            <li>Расширенный набор</li>
+                            <li>Приоритетная помощь</li>
+                            <li>Больше возможностей</li>
+                        </ul>
+                        <button class="buy-btn" data-package="Премиум пакет" data-price="799 ₽">Выбрать</button>
+                    </article>
+
+                    <article class="product-card">
+                        <h3>Легендарный</h3>
+                        <p class="price">1499 ₽</p>
+                        <p>Максимум возможностей для серьёзного игрока.</p>
+                        <ul>
+                            <li>Максимальный набор</li>
+                            <li>Приоритетная выдача</li>
+                            <li>Эксклюзивные бонусы</li>
+                        </ul>
+                        <button class="buy-btn" data-package="Легендарный пакет" data-price="1499 ₽">Выбрать</button>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section" id="about">
+                <div class="section-head">
+                    <h2>Почему выбирают нас</h2>
+                    <p>Сервис, который ощущается как дружелюбный Discord-канал — просто и надёжно</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Безопасно</h3>
+                        <p>Сделки проходят спокойно, без лишней суеты и риска.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Быстро</h3>
+                        <p>Пакеты выдаются в течение нескольких минут после оплаты.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Поддержка</h3>
+                        <p>Всегда можно обратиться за помощью и получить ответ быстро.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta">
+                <h2>Готов купить редукс?</h2>
+                <p>Оставь заявку в поддержку, и мы подберём подходящий пакет прямо сейчас.</p>
+                <a href="#" class="btn primary">Написать в поддержку</a>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
