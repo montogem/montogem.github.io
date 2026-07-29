@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Панель администратора</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="/" class="brand">БилетПДДПМР • Админ</a>
+    <nav class="nav">
+      <a href="/">На главную</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="pill">🔐 Панель управления</span>
+        <h1>Административная панель заявок</h1>
+        <p>Новые заявки появляются в реальном времени. Одобряйте или отклоняйте их без обновления страницы.</p>
+      </div>
+    </section>
+
+    <section class="buy-card" id="admin-auth-card">
+      <h2>Вход для администратора</h2>
+      <form id="admin-login-form">
+        <label>
+          <span>Логин</span>
+          <input type="text" id="admin-login" value="montogem" required />
+        </label>
+        <label>
+          <span>Пароль</span>
+          <input type="password" id="admin-password" value="Yarik1310" required />
+        </label>
+        <button type="submit" class="btn primary full">Войти</button>
+        <p class="form-message" id="admin-message"></p>
+      </form>
+    </section>
+
+    <section class="buy-card" id="admin-panel" hidden>
+      <div class="section-head">
+        <h2>Список заявок</h2>
+        <p>Заявки обновляются автоматически через Socket.IO</p>
+      </div>
+      <div id="orders-list" class="product-grid"></div>
+    </section>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

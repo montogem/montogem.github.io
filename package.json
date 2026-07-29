@@ -1,0 +1,13 @@
+{
+  "name": "montogem-ticket-shop",
+  "version": "1.0.0",
+  "description": "Ticket sales website with auth, real-time orders and admin panel",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.1.3"
+  }
+}

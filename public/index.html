@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>БилетПДДПМР — официальные билеты ПДД</title>
+    <meta name="description" content="БилетПДДПМР — понятный и доверительный сайт для покупки билетов ПДД, выбора варианта и оплаты в отдельном окне." />
+    <meta name="keywords" content="билетпддпмр, билеты пдд, купить билеты пдд, пдд обучение, билет пдд" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="БилетПДДПМР" />
+    <meta property="og:description" content="Надёжный сайт для покупки билетов ПДД с понятным оформлением и безопасной оплатой." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://montogem.github.io/" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="topbar-left">
+            <a href="#top" class="brand">БилетПДДПМР</a>
+            <a href="/admin" class="admin-link">Админ</a>
+        </div>
+        <nav class="nav">
+            <a href="#offers">Билеты</a>
+            <a href="#benefits">Преимущества</a>
+            <a href="#buy">Оплата</a>
+            <a href="#support">Поддержка</a>
+        </nav>
+    </header>
+
+    <main class="container" id="top">
+        <section class="hero">
+            <div class="hero-copy">
+                <span class="pill">🛑 Безопасно • Быстро • Доверительно</span>
+                <h1>БилетПДДПМР — удобный способ получить качественные билеты ПДД</h1>
+                <p>Мы сделали сайт понятным и аккуратным: здесь легко выбрать нужный вариант, ознакомиться с условиями и перейти к оплате в отдельном окне. Цвета, оформление и структура выдержаны в теме дорожной безопасности, чтобы вы чувствовали доверие с первого взгляда.</p>
+                <div class="hero-actions">
+                    <a href="#offers" class="btn primary">Выбрать билет</a>
+                    <a href="#benefits" class="btn secondary">Почему это надёжно</a>
+                </div>
+            </div>
+            <div class="hero-media">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80" alt="Дорожный знак и безопасность движения" />
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="about-text">
+                <h2>Что вы найдёте на сайте</h2>
+                <p>На странице представлены понятные варианты билетов, краткое описание преимуществ, а также удобная форма заявки. Всё оформлено в дорожной тематике с акцентом на безопасность, доверие и простоту выбора.</p>
+            </div>
+            <div class="about-card">
+                <h3>Текущий выбор</h3>
+                <p id="selected-ticket">Базовый набор</p>
+                <p class="selected-price" id="selected-price">От 399 ₽</p>
+                <ul>
+                    <li>Понятное оформление</li>
+                    <li>Оплата в новом окне</li>
+                    <li>Поддержка по заявке</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" id="offers">
+            <div class="section-head">
+                <h2>Варианты билетов ПДД</h2>
+                <p>Выберите подходящий пакет в зависимости от задач</p>
+            </div>
+            <div class="product-grid">
+                <article class="product-card">
+                    <h3>Базовый</h3>
+                    <p class="price">50</p>
+                    <p>Подойдёт для знакомства с основными вопросами и тренировкой.</p>
+                    <ul>
+                        <li>Базовые вопросы</li>
+                        <li>Понятный интерфейс</li>
+                        <li>Быстрый доступ</li>
+                    </ul>
+                    <a href="#buy" class="package-btn" data-ticket="Базовый набор" data-price="399 ₽">Выбрать</a>
+                </article>
+
+                <article class="product-card featured">
+                    <span class="badge">Популярно</span>
+                    <h3>Стандарт</h3>
+                    <p class="price">100</p>
+                    <p>Оптимальный вариант для тех, кто хочет больше практики и уверенности.</p>
+                    <ul>
+                        <li>Расширенный набор</li>
+                        <li>Больше тем и вопросов</li>
+                        <li>Поддержка и консультация</li>
+                    </ul>
+                    <a href="#buy" class="package-btn" data-ticket="Стандарт" data-price="799 ₽">Выбрать</a>
+                </article>
+
+                <article class="product-card">
+                    <h3>Премиум</h3>
+                    <p class="price">200</p>
+                    <p>Полный вариант для тех, кто хочет получить максимум знаний и уверенности.</p>
+                    <ul>
+                        <li>Полный комплект</li>
+                        <li>Максимум материала</li>
+                        <li>Удобная оплата</li>
+                    </ul>
+                    <a href="#buy" class="package-btn" data-ticket="Премиум" data-price="1299 ₽">Выбрать</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="benefits">
+            <div class="section-head">
+                <h2>Почему стоит доверять</h2>
+                <p>Мы сделали сайт аккуратным, понятным и безопасным по восприятию</p>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Чёткая подача</h3>
+                    <p>Сайт не перегружен лишним: всё сосредоточено на выборе билетов, оплате и поддержке.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Дорожная тематика</h3>
+                    <p>Цвета и оформление отсылают к правилам дорог, знакам и безопасному движению.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Удобная оплата</h3>
+                    <p>Оплата открывается в отдельном окне, чтобы не терять внимание и чувствовать контроль процесса.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="buy-section" id="buy">
+            <div class="buy-card">
+                <h2>Авторизация и оформление заявки</h2>
+                <p>Создайте аккаунт или войдите в существующий. После этого заявка отправится автоматически и будет сразу видна администратору.</p>
+                <div class="auth-card" id="auth-card">
+                    <form id="auth-form">
+                        <label>
+                            <span>Режим</span>
+                            <select id="auth-mode">
+                                <option value="register">Регистрация</option>
+                                <option value="login">Вход</option>
+                            </select>
+                        </label>
+                        <label id="name-field">
+                            <span>Имя</span>
+                            <input type="text" id="reg-name" placeholder="Например: Артём" required>
+                        </label>
+                        <label>
+                            <span>Почта</span>
+                            <input type="email" id="reg-email" placeholder="mail@example.com" required>
+                        </label>
+                        <label>
+                            <span>Пароль</span>
+                            <input type="password" id="reg-password" placeholder="Минимум 4 символа" required>
+                        </label>
+                        <label>
+                            <span>Телефон</span>
+                            <input type="tel" id="reg-phone" placeholder="+373xxxxxxxx" required>
+                        </label>
+                        <button type="submit" class="btn primary full">Продолжить</button>
+                        <p class="form-message" id="auth-message"></p>
+                    </form>
+                </div>
+
+                <form id="order-form" class="order-form">
+                    <label>
+                        <span>Выбранный билет</span>
+                        <select id="ticket-select" hidden>
+                            <option>Базовый набор</option>
+                            <option>Стандарт</option>
+                            <option>Премиум</option>
+                        </select>
+                    </label>
+                    <button type="submit" class="btn primary full">Оставить заявку и перейти к оплате</button>
+                    <p class="form-message" id="form-message">После входа в аккаунт заявка будет отправлена автоматически.</p>
+                </form>
+            </div>
+            <div class="buy-side">
+                <h3>Почему это удобно</h3>
+                <p id="user-welcome">Войдите в аккаунт, и мы возьмём ваши данные автоматически.</p>
+                <div class="side-item">• Быстрый выбор варианта</div>
+                <div class="side-item">• Автоматическая отправка заявки</div>
+                <div class="side-item">• Внешний вид в теме ПДД</div>
+                <button id="logout-btn" class="btn secondary" hidden>Выйти</button>
+            </div>
+        </section>
+
+        <section class="support" id="support">
+            <h2>Поддержка и контакт</h2>
+            <p>Если возникли вопросы, оставьте заявку — мы поможем подобрать нужный вариант и объясним детали.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 БилетПДДПМР — билеты ПДД и удобная оплата</p>
+    </footer>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
